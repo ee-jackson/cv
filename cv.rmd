@@ -75,7 +75,6 @@ Skills {#skills}
 CV %>% print_skills()
 ```
 
-
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
@@ -83,7 +82,7 @@ Disclaimer {#disclaimer}
 
 <!-- The source code is available [on github.com/ee-jackson/cv](https://github.com/ee-jackson/cv). -->
 
-Last updated on `r Sys.Date()`
+<!-- Last updated on `r Sys.Date()` -->
 
 
 
@@ -95,7 +94,7 @@ Eleanor Jackson {#title}
 
 ```{r}
 # Note the special double pipe so we modify the CV object in place
-CV %<>% print_text_block("intro") 
+CV %<>% print_text_block("strapline") 
 ```
 
 
@@ -127,18 +126,34 @@ CV %<>% print_section('industry_positions')
 
 
 
-Publications {data-icon=book}
+Peer-reviewed publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('pubs_aside')
+CV %<>% print_text_block('review_aside')
 ```
 :::
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
+
+\newpage
+
+Manuscripts in-prep {data-icon=file-lines}
+--------------------------------------------------------------------------------
+
+::: aside
+```{r}
+CV %<>% print_text_block('herbvar_aside')
+```
+:::
+
+```{r}
+CV %<>% print_section('in_prep')
+```
+
 
 
 
@@ -151,19 +166,18 @@ CV %<>% print_section('grants_awards')
 
 
 
-Talks & posters  {data-icon=line-chart}
+Selected presentations  {data-icon=chart-bar}
 --------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('talks_posters_aside')
+CV %<>% print_text_block('blog_aside')
 ```
 :::
 
 ```{r}
 CV %<>% print_section('talks_posters')
 ```
-
 
 
 Teaching experience {data-icon=chalkboard-teacher}
@@ -180,7 +194,7 @@ Professional society affiliations {data-icon=id-card-o}
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('review_aside')
+CV %<>% print_text_block('open_aside')
 ```
 :::
 
@@ -189,10 +203,11 @@ CV %<>% print_section('societies')
 ```
 
 
-
+<!--
 Certifications {data-icon=certificate}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('certifications')
 ```
+ -->
